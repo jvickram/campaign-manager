@@ -1,4 +1,4 @@
-# cj-app
+# Campagin-manager-app
 React SPA
 
 PROJECT BUILD STEPS (Make sure that your project is getting built successfully):
