@@ -1,11 +1,55 @@
 body{
-  background-color: #fff;
+  background-color: whitesmoke;
 }
 .App {
   text-align: center;
   padding: 15px;
-  font-size: 16px;
+  /* font-size: 16px; */
   /* text-transform: uppercase; */
   font-weight: bold;
   vertical-align: auto;
+}
+
+.header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+Link:hover{
+  color: red;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card {
+  background-color: #c5c3c3;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 5px 5px grey;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: #212529 !important;
+}
+
+.toastNotification {
+  position: fixed;
+  top: 20px;
+  right: 30%;
+  background-color: grey;
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: lightyellow;
+}
+
+.inputField{
+  padding: 10px;
 }
