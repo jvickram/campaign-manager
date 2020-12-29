@@ -29,5 +29,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@testing-library/react": "^11.2.2",
+    "deep-freeze": "0.0.1"
+  }
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 import {
-    Container
+    Container, Button
 } from 'reactstrap';
 import InputField from '../Common/InputField'
 import Buttons from '../Common/Buttons'
@@ -25,12 +26,19 @@ class NewCampaign extends Component {
                 <InputField Title= "Owner Name" Value={owner} onChange={e=>this.props.ownerChanged(e)} />
                 <InputField Title= "Type" Value={campaignType} onChange={e=>this.props.typeChanged(e)} />
 
+                <div className="App">
                 <Buttons 
                     Disabled={owner==="" || campaignType===""} 
                     OnClick={()=>this.props.updateCampaign(owner,campaignType, createdTime)}LinkTo="/"
-                    OnReset={()=>this.props.reset()}>
+                    >
                         Update
                 </Buttons>
+                <Link to='/'>
+                    <Button color="primary" onClick={()=>this.props.reset()}>
+                        Back
+                    </Button>
+                </Link>
+                </div>
             </Container>
         )
         } else 
@@ -42,13 +50,20 @@ class NewCampaign extends Component {
                 {toast}
                 <InputField Title= "Owner Name" Value={owner} onChange={e=>this.props.ownerChanged(e)} />
                 <InputField Title= "Type" Value={campaignType} onChange={e=>this.props.typeChanged(e)} />
+                <div className="App">
                 <Buttons 
                     Disabled={owner==="" || campaignType===""} 
                     OnClick={()=>this.props.createCampaign(owner,campaignType)}
-                    LinkTo="/"
-                    OnReset={()=>this.props.reset()}>
+                    >
                         Create
                 </Buttons>
+                <Link to='/'>
+                    <Button color="primary" onClick={()=>this.props.reset()}>
+                        Back
+                    </Button>
+                </Link>
+                </div>
+                
             </Container>
         )
     }
@@ -85,7 +100,6 @@ function mapDispatch(dispatch) {
             }
             
             dispatch({ type: "ADD_CAMPAIGN", newCampaign: NewCampaign })
-            //  this.props.history.push("/campaignslist")
         },
         updateCampaign(owner,campaignType, createdTime){
             var currentdate = new Date(); 

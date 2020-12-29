@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
     Container, Row, Col,
-    Card, CardBody, Input, Button
+    Card, CardBody
 } from 'reactstrap';
 import { Link } from 'react-router-dom'
-// import AllCampaigns from '../AllCampaign.json';
-// import NewCampaign from './NewCampaign';
 
 export default function Home() {
     

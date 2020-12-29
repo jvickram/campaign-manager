@@ -53,7 +53,6 @@ function mapState(state) {
 function mapDispatch(dispatch){
     return ({
         edit(item){
-            console.log("item", item)
             dispatch({type:'EDIT_START', selected: item})
         }
     })

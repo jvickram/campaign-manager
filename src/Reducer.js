@@ -6,7 +6,7 @@ export default (state = {
     toastStatus:false,
     selected: {}
 }, action) => {
-    console.log('Action',action.type, state)
+    // console.log('Action',action.type, state)
 	switch (action.type) {
         case "OWNER_CHANGED":
             return {
@@ -37,6 +37,7 @@ export default (state = {
                 item.type= state.campaignType;
                 item.createdTime= updateItem.createdTime;
                 item.lastmodifiedTime= updateItem.lastmodifiedTime;
+                return updateItem
             }
         })
             return {

@@ -8,6 +8,7 @@ const Home = React.lazy(() => import('./Components/Home'))
 const AllCampaigns = React.lazy(() => import('./Components/AllCampaigns'))
 const NewCampaign = React.lazy(() => import('./Components/NewCampaign'))
 
+
 class App extends Component {
   render() {
     return (
